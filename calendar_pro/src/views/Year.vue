@@ -1,0 +1,37 @@
+<template>
+    <div class="container">
+        YearPage
+    </div>
+</template>
+
+<script>
+import getData from '@/services'
+import { onMounted } from 'vue';
+export default {
+    name: 'YearPage',
+    setup() {
+        onMounted(()=>{
+            getData('year', '2020')
+        })
+    }
+}
+</script>
+
+<style lang="scss" scoped>
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: .44rem;
+    background-color: #ed4040;
+    text-align: center;
+    line-height: .44rem;
+
+    h1 {
+      font-size: .18rem;
+      color: #fff;
+    }
+  }
+</style>
